@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="id"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260903-03-1632ed8","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/9e99ecf74af2a081.telemetry_sdk.js" integrity="sha512-tZ7fmfTx2KpCLjXQnEuL9azQ4A5+7+xumsx6r/WYVD0zCP/8LP8hDeCypMQesmP+WyAew4g7l5Ah23Bjd6yoVg=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATOMIC ADMIN — Pendaftaran Partner</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/fbe2ebfd64647c54.data_sdk.js" integrity="sha512-vkTX6CfvpHc3WbjK+tFJCaDuw4ERA4aEV/e5/7+MMJPMTF4RJYCI6CAwJBT/gtDW+dba4uLSsPUgDjVDHWtgUQ=="></script>
+  <script src="/_sdk/e10c717c7e974dd1.editing_sdk.js" integrity="sha512-BcrhlH+uc7adjbcWhp1iZYPDDw0dRJh9MMJKYNtKQ35BtD5tMsxKlz53TSV8BnEY+0eujtTiWSFjanv0cOjj1g=="></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#071A3D;--ink:#05070B;--electric:#2196ff;--line:#2c64a9;--soft:#c9ddf7;--muted:#a9b7cf}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#05070B;color:#edf5ff;font-family:"DM Sans",sans-serif}
+    button,input,textarea,select{font:inherit}
+    .atomic-shell{width:100%;min-height:calc(100 * min(var(--vh,1vh),1vh));overflow:hidden;background:radial-gradient(circle at 8% 0%,#174889 0,transparent 25%),radial-gradient(circle at 90% 25%,#0c326f 0,transparent 26%),linear-gradient(135deg,#05070B 18%,#071A3D 100%)}
+    .grid-glow{background-image:linear-gradient(rgba(68,145,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(68,145,255,.07) 1px,transparent 1px);background-size:36px 36px}
+    .panel{background:rgba(5,12,27,.88);border:1px solid rgba(74,151,255,.34);box-shadow:0 20px 60px rgba(0,0,0,.32),0 0 36px rgba(33,150,255,.055)}
+    .electric-ring{box-shadow:0 0 0 1px rgba(85,171,255,.25),0 0 38px rgba(33,150,255,.18)}
+    .route-view{display:none}.route-view.active{display:block;animation:reveal .42s ease-out both}
+    .admin-only{display:none}.admin-only.active{display:block;animation:reveal .35s ease-out both}
+    .reveal{animation:reveal .6s ease-out both}.delay-1{animation-delay:.1s}.delay-2{animation-delay:.2s}.delay-3{animation-delay:.3s}.delay-4{animation-delay:.4s}
+    @keyframes reveal{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes float{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-9px) rotate(1deg)}}
+    .mascot-float{animation:float 5s ease-in-out infinite}
+    .field{width:100%;margin-top:7px;border:1px solid #315b91;border-radius:11px;padding:12px 13px;color:#eff7ff;background:#08152a;outline:none;transition:border-color .2s,box-shadow .2s,transform .2s}
+    .field:focus{border-color:#57b0ff;box-shadow:0 0 0 3px rgba(33,150,255,.2);transform:translateY(-1px)}
+    .field.invalid{border-color:#fb7185;box-shadow:0 0 0 3px rgba(251,113,133,.13)}
+    .choice{border:1px solid #315b91;border-radius:11px;padding:10px 12px;cursor:pointer;transition:.2s;background:#08152a}
+    .choice:hover{border-color:#4c9de6;background:#0b1d39}
+    .choice:has(input:checked){border-color:#43a7ff;background:#0a2854;box-shadow:inset 0 0 0 1px #43a7ff,0 0 16px rgba(33,150,255,.1)}
+    .choice input{accent-color:#2196ff}
+    .step{opacity:.45;transition:opacity .3s,color .3s,transform .3s}.step.active{opacity:1;color:#fff;transform:translateY(-1px)}.step.done{opacity:.9}
+    .step-number{width:30px;height:30px;display:grid;place-items:center;border:1px solid #37649d;border-radius:999px;font:700 11px "Space Mono",monospace;transition:.3s}
+    .step.active .step-number{background:#2196ff;color:#031127;border-color:#8ac9ff;box-shadow:0 0 16px rgba(33,150,255,.45)}.step.done .step-number{background:#0dce99;color:#041912;border-color:#61f0c7}
+    .form-step{display:none}.form-step.active{display:block;animation:reveal .3s ease-out both}
+    .review-track{display:flex;transition:transform .55s cubic-bezier(.22,.8,.28,1);will-change:transform}
+    .review-slide{min-width:100%;padding:0 2px}
+    .review-card{min-height:285px;background:linear-gradient(145deg,rgba(12,35,76,.95),rgba(5,12,27,.96));border:1px solid rgba(74,151,255,.38);box-shadow:inset 0 1px 0 rgba(255,255,255,.04),0 16px 40px rgba(0,0,0,.24)}
+    .review-dot{width:8px;height:8px;border-radius:999px;background:#335b91;transition:.25s}.review-dot.active{width:23px;background:#58adff;box-shadow:0 0 11px rgba(33,150,255,.65)}
+    .icon-button{display:grid;place-items:center;width:42px;height:42px;border:1px solid rgba(111,179,255,.38);border-radius:12px;color:#dceeff;background:rgba(8,21,42,.8);transition:.2s}.icon-button:hover{background:#103463;border-color:#62b4ff;transform:translateY(-2px)}
+    .status-badge{border-radius:999px;padding:4px 9px;font-size:12px;font-weight:700;white-space:nowrap}.status-Baru{background:#173e70;color:#a7d4ff}.status-Ditinjau{background:#5c4010;color:#ffd57d}.status-Lolos{background:#0b563e;color:#8cf0ce}.status-Tidak-Lolos{background:#662232;color:#ffb1bf}
+    .modal{display:none}.modal.open{display:flex}
+    .focusable:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #8bcaff;outline-offset:3px}
+    @media(max-width:640px){.step-label{display:none}.review-card{min-height:315px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.route-view.active,.admin-only.active,.form-step.active,.mascot-float{animation:none}.review-track,.step,.field,.choice,.icon-button{transition:none}}
+  </style>
+  <script src="/_sdk/fcb6dc01f91829ac.resizing_sdk.js" type="text/javascript" integrity="sha512-YK8JfnN705qaEaVhiL7pcVB2Rs/BbdX5yxV55Az8zT/1JanyEWTw9HqCF915m9iV1YEaoil8qsjJz03l1Kb0Ug=="></script>
+ </head>
+ <body data-template-id="__page-root" style="background: linear-gradient(135deg, rgb(5, 7, 11), rgb(7, 26, 61));">
+  <div class="atomic-shell grid-glow">
+   <header data-template-id="site-header" class="canva-header sticky top-0 z-30 border-b border-blue-400/25 bg-[#05070B]/90 backdrop-blur" style="background: rgb(5, 7, 11);">
+    <div class="w-full max-w-7xl mx-auto px-5 py-3 flex items-center justify-between gap-4"><button type="button" class="flex items-center gap-3 text-left rounded-lg" onclick="goRoute('pendaftar')" aria-label="Kembali ke halaman pendaftar"> <img data-template-id="header-mascot" loading="lazy" class="canva-image w-11 h-11 object-contain rounded-xl bg-blue-500/10 border border-blue-300/20" src="canva://MAHUIreWkL8/1" alt="Maskot ilustrasi Atomic Admin sedang melambaikan tangan"> <span> <span data-template-id="brand-name" class="canva-text block font-extrabold tracking-[.16em] text-sm" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px; letter-spacing: 0.12rem;">ATOMIC ADMIN</span> <span data-template-id="brand-caption" class="canva-text block text-xs" style="color: rgb(169, 201, 244); font-weight: 400; font-style: normal; font-size: 11px; letter-spacing: 0.08rem;">SISTEM SELEKSI PARTNER</span> </span> </button>
+     <nav aria-label="Navigasi utama" class="flex gap-2 text-sm"><button data-template-id="nav-applicant" type="button" onclick="goRoute('pendaftar')" class="canva-button rounded-lg px-3 py-2 hover:bg-blue-500/15" style="color: rgb(220, 238, 255); font-weight: 600; font-style: normal; font-size: 16px;">Pendaftar</button> <button data-template-id="nav-admin" type="button" onclick="goRoute('data-pendaftar')" class="canva-button rounded-lg border border-blue-400/40 px-3 py-2 hover:bg-blue-500/15" style="color: rgb(220, 238, 255); font-weight: 600; font-style: normal; font-size: 16px;">Owner / Admin</button>
+     </nav>
+    </div>
+   </header>
+   <main class="w-full max-w-7xl mx-auto px-5 py-8 md:py-12">
+    <section id="pendaftar-view" class="route-view active" aria-labelledby="applicant-title">
+     <div class="grid lg:grid-cols-[1.15fr_.85fr] gap-8 lg:gap-12 items-center">
+      <div>
+       <p data-template-id="applicant-kicker" class="canva-text reveal font-mono text-xs tracking-[.2em]" style="color: rgb(141, 202, 255); font-weight: 700; font-style: normal; font-size: 16px; letter-spacing: 0.12rem;">PROGRAM SELEKSI PARTNER</p>
+       <h1 data-template-id="applicant-title" class="canva-text reveal delay-1 mt-3 font-extrabold tracking-tight leading-[1.04]" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 38px; line-height: 1.05;">Mulai langkahmu bersama ATOMIC ADMIN.</h1>
+       <p data-template-id="applicant-intro" class="canva-text reveal delay-2 max-w-2xl mt-5 leading-relaxed" style="color: rgb(201, 221, 247); font-weight: 400; font-style: normal; font-size: 17px; line-height: 1.6;">Lengkapi pendaftaran secara bertahap. Setiap jawaban membantu proses seleksi dilakukan dengan jelas, sopan, dan bertanggung jawab.</p>
+       <div class="reveal delay-3 mt-7 flex flex-wrap gap-3">
+        <div data-template-id="hero-info-card" class="canva-card rounded-xl px-4 py-3 border border-blue-400/25 bg-[#08152a]/75" style="background: rgb(8, 21, 42);">
+         <p data-template-id="hero-info-label" class="canva-text text-xs" style="color: rgb(169, 201, 244); font-weight: 600; font-style: normal; font-size: 11px; letter-spacing: 0.06rem;">ALUR PENDAFTARAN</p>
+         <p data-template-id="hero-info-value" class="canva-text mt-1 font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">4 tahap sederhana</p>
+        </div>
+        <div data-template-id="hero-note-card" class="canva-card rounded-xl px-4 py-3 border border-blue-400/25 bg-[#08152a]/75" style="background: rgb(8, 21, 42);">
+         <p data-template-id="hero-note-label" class="canva-text text-xs" style="color: rgb(169, 201, 244); font-weight: 600; font-style: normal; font-size: 11px; letter-spacing: 0.06rem;">PENGISIAN DATA</p>
+         <p data-template-id="hero-note-value" class="canva-text mt-1 font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Jaga data tetap seperlunya</p>
+        </div>
+       </div>
+      </div>
+      <div class="reveal delay-2 relative mx-auto w-full max-w-sm">
+       <div class="absolute inset-8 rounded-full bg-blue-500/20 blur-3xl"></div>
+       <div class="relative panel electric-ring rounded-[2rem] p-5 min-h-[390px] flex items-end justify-center overflow-hidden">
+        <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#061838] to-transparent"></div><img data-template-id="hero-mascot" loading="lazy" class="canva-image mascot-float relative z-10 h-[365px] max-w-full object-contain object-bottom" src="canva://MAHUIreWkL8/1" alt="Maskot ilustrasi Atomic Admin sedang melambaikan tangan">
+        <div data-template-id="mascot-label" class="canva-tag absolute z-20 top-5 left-5 rounded-full border border-blue-300/35 bg-[#071A3D]/80 px-3 py-1.5 text-xs font-bold" style="background: rgb(7, 26, 61); color: rgb(185, 223, 255); font-weight: 700; font-style: normal; font-size: 16px; letter-spacing: 0.05rem;">ATOMIC WELCOMES YOU</div>
+       </div>
+      </div>
+     </div>
+     <section class="reveal delay-4 mt-14" aria-labelledby="reviews-title">
+      <div class="flex flex-wrap justify-between items-end gap-4 mb-5">
+       <div>
+        <p data-template-id="reviews-kicker" class="canva-text font-mono text-xs tracking-[.17em]" style="color: rgb(141, 202, 255); font-weight: 700; font-style: normal; font-size: 16px; letter-spacing: 0.12rem;">DARI BUYER ATOMIC STORE</p>
+        <h2 data-template-id="reviews-title" class="canva-text mt-2 font-bold" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 27px;">Ulasan Buyer Atomic Store</h2>
+       </div>
+       <p data-template-id="reviews-count-note" class="canva-text text-sm" style="color: rgb(169, 201, 244); font-weight: 600; font-style: normal; font-size: 16px;">69 komentar lainnya</p>
+      </div>
+      <div id="review-carousel" class="relative" aria-roledescription="carousel" aria-label="Carousel ulasan buyer Atomic Store">
+       <div class="overflow-hidden rounded-2xl">
+        <div id="review-track" class="review-track">
+         <article class="review-slide">
+          <div data-template-id="review-card-1" class="canva-card review-card rounded-2xl p-6 md:p-8" style="background: rgb(8, 21, 42);">
+           <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full grid place-items-center bg-blue-500/20 border border-blue-300/25 font-bold">
+             R
+            </div>
+            <div>
+             <p data-template-id="review-source-1" class="canva-text font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">@rvannow</p>
+             <p data-template-id="review-type-1" class="canva-text text-xs mt-0.5" style="color: rgb(169, 201, 244); font-weight: 400; font-style: normal; font-size: 12px;">Instagram</p>
+            </div>
+           </div>
+           <blockquote data-template-id="review-text-1" class="canva-text mt-7 text-lg leading-relaxed" style="color: rgb(234, 245, 255); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.6;"> amanah euy, pelayanan nya baik, fee nya juga Alhamdulillah ngga kuras dana, walaupun sering slow resp tapi masih baik 🗿 </blockquote>
+          </div>
+         </article>
+         <article class="review-slide">
+          <div data-template-id="review-card-2" class="canva-card review-card rounded-2xl p-6 md:p-8" style="background: rgb(8, 21, 42);">
+           <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full grid place-items-center bg-blue-500/20 border border-blue-300/25 font-bold">
+             R
+            </div>
+            <div>
+             <p data-template-id="review-source-2" class="canva-text font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">@rrjel</p>
+             <p data-template-id="review-type-2" class="canva-text text-xs mt-0.5" style="color: rgb(169, 201, 244); font-weight: 400; font-style: normal; font-size: 12px;">Instagram</p>
+            </div>
+           </div>
+           <blockquote data-template-id="review-text-2" class="canva-text mt-7 text-lg leading-relaxed" style="color: rgb(234, 245, 255); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.6;"> Gud fastrespo atmin ramah </blockquote>
+          </div>
+         </article>
+         <article class="review-slide">
+          <div data-template-id="review-card-3" class="canva-card review-card rounded-2xl p-6 md:p-8" style="background: rgb(8, 21, 42);">
+           <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full grid place-items-center bg-blue-500/20 border border-blue-300/25 font-bold">
+             D
+            </div>
+            <div>
+             <p data-template-id="review-source-3" class="canva-text font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">@dhyka_85</p>
+             <p data-template-id="review-type-3" class="canva-text text-xs mt-0.5" style="color: rgb(169, 201, 244); font-weight: 400; font-style: normal; font-size: 12px;">Instagram</p>
+            </div>
+           </div>
+           <blockquote data-template-id="review-text-3" class="canva-text mt-7 text-lg leading-relaxed" style="color: rgb(234, 245, 255); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.6;"> amahan di jamin aman trus Mimin nya Rama baik juga di anjur kan di sini kalau mau bli aku atau sewa akun </blockquote>
+          </div>
+         </article>
+         <article class="review-slide">
+          <div data-template-id="review-card-4" class="canva-card review-card rounded-2xl p-6 md:p-8" style="background: rgb(8, 21, 42);">
+           <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full grid place-items-center bg-blue-500/20 border border-blue-300/25 font-bold">
+             P
+            </div>
+            <div>
+             <p data-template-id="review-source-4" class="canva-text font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">@paryy.xd</p>
+             <p data-template-id="review-type-4" class="canva-text text-xs mt-0.5" style="color: rgb(169, 201, 244); font-weight: 400; font-style: normal; font-size: 12px;">Instagram</p>
+            </div>
+           </div>
+           <blockquote data-template-id="review-text-4" class="canva-text mt-7 text-lg leading-relaxed" style="color: rgb(234, 245, 255); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.6;"> Mimin atomic, ya awal aku lansung liat namanya aja keliatan profesional banget ya, bahkan mimin atomic sendiri jadi motivasi aku buat terjun di dunia jb, semoga kedepannya mimin atomic amanah selalu dan makin berkembang per jb an nya, makasih atas semua ilmu yg di berikan min 🙌🔥. (Paryyxd) </blockquote>
+          </div>
+         </article>
+         <article class="review-slide">
+          <div data-template-id="review-card-5" class="canva-card review-card rounded-2xl p-6 md:p-8" style="background: rgb(8, 21, 42);">
+           <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full grid place-items-center bg-blue-500/20 border border-blue-300/25 font-bold">
+             R
+            </div>
+            <div>
+             <p data-template-id="review-source-5" class="canva-text font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">@rollszz2310</p>
+             <p data-template-id="review-type-5" class="canva-text text-xs mt-0.5" style="color: rgb(169, 201, 244); font-weight: 400; font-style: normal; font-size: 12px;">Instagram</p>
+            </div>
+           </div>
+           <blockquote data-template-id="review-text-5" class="canva-text mt-7 text-lg leading-relaxed" style="color: rgb(234, 245, 255); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.6;"> amanahh kalii, alwayss yaa bgg, udahh 2 kalii mc disinii, dengann nominall yangg cukupp besarr, sangatt amanahh🙌👏😍 </blockquote>
+          </div>
+         </article>
+         <article class="review-slide">
+          <div data-template-id="review-card-6" class="canva-card review-card rounded-2xl p-6 md:p-8" style="background: rgb(8, 21, 42);">
+           <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full grid place-items-center bg-blue-500/20 border border-blue-300/25 font-bold">
+             I
+            </div>
+            <div>
+             <p data-template-id="review-source-6" class="canva-text font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">@izamazfa</p>
+             <p data-template-id="review-type-6" class="canva-text text-xs mt-0.5" style="color: rgb(169, 201, 244); font-weight: 400; font-style: normal; font-size: 12px;">Instagram</p>
+            </div>
+           </div>
+           <blockquote data-template-id="review-text-6" class="canva-text mt-7 text-lg leading-relaxed" style="color: rgb(234, 245, 255); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.6;"> ini store dah dari 2024 masih amanah juga cuyy gelookk dah 3 akun beli disini ga di rip njirrr 🙌👏👏 </blockquote>
+          </div>
+         </article>
+         <article class="review-slide">
+          <div data-template-id="review-card-7" class="canva-card review-card rounded-2xl p-6 md:p-8" style="background: rgb(8, 21, 42);">
+           <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full grid place-items-center bg-blue-500/20 border border-blue-300/25 font-bold">
+             A
+            </div>
+            <div>
+             <p data-template-id="review-source-7" class="canva-text font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">@almust4qim</p>
+             <p data-template-id="review-type-7" class="canva-text text-xs mt-0.5" style="color: rgb(169, 201, 244); font-weight: 400; font-style: normal; font-size: 12px;">Instagram</p>
+            </div>
+           </div>
+           <p data-template-id="review-rating-7" class="canva-text mt-6 text-yellow-300 tracking-[.16em]" style="color: rgb(253, 230, 138); font-weight: 700; font-style: normal; font-size: 16px;">⭐⭐⭐⭐⭐</p>
+           <blockquote data-template-id="review-text-7" class="canva-text mt-4 text-lg leading-relaxed" style="color: rgb(234, 245, 255); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.6;"> Mimin Atomic emang juara! 🏆 Dari awal chat udah berasa fast respon banget, nggak pakai drama nunggu lama. Transaksi pertama sempet ragu, eh ternyata amanah 100% dan prosesnya kilat. Sejak saat itu gak pernah ke lain hati kalau urusan top-up atau beli item. Sukses terus Atomic Store! 🔥" Recommended seller pokoknya! ⭐⭐⭐⭐⭐</blockquote>
+          </div>
+         </article>
+        </div>
+       </div>
+       <div class="flex items-center justify-between gap-4 mt-5">
+        <div class="flex gap-2" id="review-dots" aria-label="Pilih ulasan"><button class="review-dot active" type="button" aria-label="Ulasan 1"></button><button class="review-dot" type="button" aria-label="Ulasan 2"></button><button class="review-dot" type="button" aria-label="Ulasan 3"></button><button class="review-dot" type="button" aria-label="Ulasan 4"></button><button class="review-dot" type="button" aria-label="Ulasan 5"></button><button class="review-dot" type="button" aria-label="Ulasan 6"></button><button class="review-dot" type="button" aria-label="Ulasan 7"></button>
+        </div>
+        <div class="flex gap-2"><button data-template-id="reviews-prev" id="reviews-prev" type="button" class="canva-button icon-button" aria-label="Ulasan sebelumnya" style="background: rgb(8, 21, 42); color: rgb(220, 238, 255);"><i data-lucide="arrow-left" class="w-5 h-5"></i></button> <button data-template-id="reviews-next" id="reviews-next" type="button" class="canva-button icon-button" aria-label="Ulasan berikutnya" style="background: rgb(8, 21, 42); color: rgb(220, 238, 255);"><i data-lucide="arrow-right" class="w-5 h-5"></i></button>
+        </div>
+       </div>
+      </div>
+      <p data-template-id="reviews-disclaimer" class="canva-text mt-5 text-xs leading-relaxed" style="color: rgb(169, 183, 207); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.5;">Ulasan ditampilkan sesuai materi yang diberikan oleh pengelola Atomic Store.</p>
+     </section>
+     <aside data-template-id="privacy-banner" class="canva-banner reveal mt-12 max-w-5xl rounded-xl border border-blue-400/40 p-4 flex gap-3" style="background: rgb(9, 35, 74);"><i data-lucide="shield-alert" class="shrink-0 text-blue-300 w-5 h-5 mt-0.5"></i>
+      <p data-template-id="privacy-banner-text" class="canva-text text-sm leading-relaxed" style="color: rgb(213, 233, 255); font-weight: 400; font-style: normal; font-size: 14px; line-height: 1.55;">Tujuan pemrosesan data adalah evaluasi calon partner. Data hanya boleh dikumpulkan bila ada dasar hukum, tujuan jelas, persetujuan sah, kontrol akses, dan kebijakan retensi yang sesuai.</p>
+     </aside>
+     <div class="panel reveal mt-8 rounded-2xl overflow-hidden">
+      <div class="p-5 border-b border-blue-400/25">
+       <div class="flex justify-between gap-3 overflow-x-auto">
+        <div class="step active flex items-center gap-2 min-w-max" data-step-indicator="1">
+         <span class="step-number">01</span><span data-template-id="step-profile" class="canva-text step-label text-sm font-semibold" style="color: rgb(234, 245, 255); font-weight: 700; font-style: normal; font-size: 16px;">Profil</span>
+        </div>
+        <div class="step flex items-center gap-2 min-w-max" data-step-indicator="2">
+         <span class="step-number">02</span><span data-template-id="step-contribution" class="canva-text step-label text-sm font-semibold" style="color: rgb(234, 245, 255); font-weight: 700; font-style: normal; font-size: 16px;">Kontribusi</span>
+        </div>
+        <div class="step flex items-center gap-2 min-w-max" data-step-indicator="3">
+         <span class="step-number">03</span><span data-template-id="step-sensitive" class="canva-text step-label text-sm font-semibold" style="color: rgb(234, 245, 255); font-weight: 700; font-style: normal; font-size: 16px;">Data Sensitif</span>
+        </div>
+        <div class="step flex items-center gap-2 min-w-max" data-step-indicator="4">
+         <span class="step-number">04</span><span data-template-id="step-consent" class="canva-text step-label text-sm font-semibold" style="color: rgb(234, 245, 255); font-weight: 700; font-style: normal; font-size: 16px;">Persetujuan</span>
+        </div>
+       </div>
+      </div>
+      <form id="registration-form" class="p-5 md:p-8" novalidate="">
+       <section class="form-step active" data-form-step="1" aria-labelledby="profile-heading">
+        <h2 data-template-id="profile-heading" class="canva-text font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Profil calon partner</h2>
+        <p data-template-id="profile-help" class="canva-text mt-1 text-sm" style="color: rgb(181, 203, 232); font-weight: 400; font-style: normal; font-size: 14px;">Isi informasi operasional dasar untuk keperluan proses seleksi.</p>
+        <div class="grid md:grid-cols-2 gap-4 mt-6">
+         <div>
+          <label data-template-id="name-label" class="canva-text text-sm font-semibold" for="full-name" style="color: rgb(234, 245, 255); font-weight: 600; font-style: normal; font-size: 16px;">Nama lengkap</label><input id="full-name" class="field" required="" autocomplete="name">
+         </div>
+         <div>
+          <label data-template-id="email-label" class="canva-text text-sm font-semibold" for="email" style="color: rgb(234, 245, 255); font-weight: 600; font-style: normal; font-size: 16px;">Email aktif</label><input id="email" type="email" class="field" required="" autocomplete="email">
+         </div>
+         <div>
+          <label data-template-id="contact-label" class="canva-text text-sm font-semibold" for="contact" style="color: rgb(234, 245, 255); font-weight: 600; font-style: normal; font-size: 16px;">Nomor kontak pendaftar</label><input id="contact" type="tel" class="field" required="" inputmode="tel" autocomplete="tel">
+         </div>
+         <div>
+          <label data-template-id="birth-place-label" class="canva-text text-sm font-semibold" for="birth-place" style="color: rgb(234, 245, 255); font-weight: 600; font-style: normal; font-size: 16px;">Tempat lahir</label><input id="birth-place" class="field" required="">
+         </div>
+         <div>
+          <label data-template-id="birth-date-label" class="canva-text text-sm font-semibold" for="birth-date" style="color: rgb(234, 245, 255); font-weight: 600; font-style: normal; font-size: 16px;">Tanggal lahir</label><input id="birth-date" type="date" class="field" required="">
+         </div>
+         <div>
+          <label data-template-id="school-label" class="canva-text text-sm font-semibold" for="school" style="color: rgb(234, 245, 255); font-weight: 600; font-style: normal; font-size: 16px;">Nama Sekolah?</label><input id="school" class="field" required="">
+         </div>
+        </div>
+        <div class="mt-4">
+         <label data-template-id="address-label" class="canva-text text-sm font-semibold" for="address" style="color: rgb(234, 245, 255); font-weight: 600; font-style: normal; font-size: 16px;">Alamat Tinggal Sekarang? (Lengkap)</label>
+         <p data-template-id="address-warning" class="canva-text mt-1 text-xs" style="color: rgb(253, 230, 138); font-weight: 400; font-style: normal; font-size: 12px;">Privasi: jangan sertakan data identitas tambahan yang tidak diperlukan.</p><textarea id="address" class="field min-h-24" required=""></textarea>
+        </div>
+       </section>
+       <section class="form-step" data-form-step="2" aria-labelledby="contribution-heading">
+        <h2 data-template-id="contribution-heading" class="canva-text font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Motivasi &amp; kontribusi</h2>
+        <div class="mt-5">
+         <label data-template-id="reason-label" class="canva-text text-sm font-semibold" for="reason" style="color: rgb(234, 245, 255); font-weight: 600; font-style: normal; font-size: 16px;">Apa alasan kamu ingin join menjadi bagian dari Admin Atomic?</label><textarea id="reason" class="field min-h-28" required=""></textarea>
+        </div>
+        <fieldset class="mt-5">
+         <legend data-template-id="ready-label" class="canva-text text-sm font-semibold" style="color: rgb(234, 245, 255); font-weight: 600; font-style: normal; font-size: 16px;">Apakah kamu siap berkontribusi besar jika menjadi bagian dari Atomic Market?</legend>
+         <div class="flex gap-3 mt-3">
+          <label class="choice"><input type="radio" name="ready" value="yes" required=""> <span data-template-id="ready-yes" class="canva-text ml-1" style="color: rgb(234, 245, 255); font-weight: 400; font-style: normal; font-size: 16px;">Ya</span></label><label class="choice"><input type="radio" name="ready" value="no"> <span data-template-id="ready-no" class="canva-text ml-1" style="color: rgb(234, 245, 255); font-weight: 400; font-style: normal; font-size: 16px;">Tidak</span></label>
+         </div>
+        </fieldset>
+        <div id="contribution-wrap" class="hidden mt-5">
+         <label data-template-id="contribution-label" class="canva-text text-sm font-semibold" for="contribution" style="color: rgb(234, 245, 255); font-weight: 600; font-style: normal; font-size: 16px;">Jika siap, apa kontribusi besar yang akan kamu lakukan untuk membangun semua ini agar tetap berjalan lancar?</label><textarea id="contribution" class="field min-h-28"></textarea>
+        </div>
+        <p id="no-contribution-note" data-template-id="no-contribution-note" class="canva-text hidden mt-4 rounded-lg border border-blue-400/25 bg-blue-500/10 p-3 text-sm" style="color: rgb(213, 233, 255); font-weight: 400; font-style: normal; font-size: 14px;">Terima kasih atas jawaban yang jujur. Kamu tetap dapat melanjutkan pendaftaran dan menjelaskan pertimbanganmu pada tahap berikutnya bila diperlukan.</p>
+       </section>
+       <section class="form-step" data-form-step="3" aria-labelledby="sensitive-heading">
+        <h2 data-template-id="sensitive-heading" class="canva-text font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Pilihan terkait data sensitif</h2>
+        <aside data-template-id="sensitive-warning" class="canva-banner mt-4 rounded-xl border border-amber-400/50 p-4" style="background: rgb(63, 45, 10);">
+         <p data-template-id="sensitive-warning-text" class="canva-text text-sm leading-relaxed" style="color: rgb(255, 243, 196); font-weight: 400; font-style: normal; font-size: 14px; line-height: 1.55;">KTP, KK, KIA/Kartu Identitas Anak, Kartu Pelajar, lokasi, akun media sosial, nomor telepon, dan selfie memegang KK adalah data sangat sensitif. Prototipe ini tidak meminta unggahan, nomor, lokasi presisi, atau nilai dokumen. Jangan pernah mengirim password, PIN, OTP, atau akses akun.</p>
+        </aside>
+        <p data-template-id="sensitive-instruction" class="canva-text mt-4 text-sm" style="color: rgb(201, 221, 247); font-weight: 400; font-style: normal; font-size: 14px; line-height: 1.5;">Pilih status untuk setiap permintaan. Jika pendaftar di bawah umur, persetujuan wali dan proses yang sesuai wajib dipastikan sebelum mengumpulkan data identitas anak atau nomor orang tua.</p>
+        <div id="sensitive-grid" class="grid md:grid-cols-2 gap-3 mt-5"></div>
+        <fieldset class="mt-6">
+         <legend data-template-id="sensitive-consent-label" class="canva-text text-sm font-semibold" style="color: rgb(234, 245, 255); font-weight: 600; font-style: normal; font-size: 16px;">Apakah kamu bersedia membahas kebutuhan data sensitif hanya jika benar-benar diperlukan dan diizinkan?</legend>
+         <div class="flex flex-wrap gap-3 mt-3">
+          <label class="choice"><input type="radio" name="sensitive-consent" value="Setuju" required=""> <span data-template-id="sensitive-consent-yes" class="canva-text" style="color: rgb(234, 245, 255); font-weight: 400; font-style: normal; font-size: 16px;">Setuju untuk dibahas secara terbatas</span></label><label class="choice"><input type="radio" name="sensitive-consent" value="Perlu klarifikasi"> <span data-template-id="sensitive-consent-clarify" class="canva-text" style="color: rgb(234, 245, 255); font-weight: 400; font-style: normal; font-size: 16px;">Perlu klarifikasi</span></label>
+         </div>
+        </fieldset>
+       </section>
+       <section class="form-step" data-form-step="4" aria-labelledby="consent-heading">
+        <h2 data-template-id="consent-heading" class="canva-text font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Pernyataan &amp; ringkasan</h2>
+        <div class="mt-5 space-y-5">
+         <fieldset>
+          <legend data-template-id="truth-statement" class="canva-text text-sm leading-relaxed" style="color: rgb(234, 245, 255); font-weight: 400; font-style: normal; font-size: 14px; line-height: 1.55;">Dengan ini saya mengajukan lamaran menjadi salah satu partner atomic dengan melampirkan data-data yang sebenar-benarnya, apabila terbukti data yang dilampirkan tidak sesuai dengan keadaan yang sebenarnya maka saya siap untuk dinyatakan gugur dalam proses seleksi penerimaan Calon Partner Admin Baru.</legend>
+          <div class="flex gap-3 mt-3">
+           <label class="choice"><input type="radio" name="truth" value="yes" required=""> <span data-template-id="statement-yes-1" class="canva-text" style="color: rgb(234, 245, 255); font-weight: 400; font-style: normal; font-size: 16px;">Ya</span></label><label class="choice"><input type="radio" name="truth" value="no"> <span data-template-id="statement-no-1" class="canva-text" style="color: rgb(234, 245, 255); font-weight: 400; font-style: normal; font-size: 16px;">Tidak</span></label>
+          </div>
+         </fieldset>
+         <fieldset>
+          <legend data-template-id="payment-statement" class="canva-text text-sm leading-relaxed" style="color: rgb(234, 245, 255); font-weight: 400; font-style: normal; font-size: 14px; line-height: 1.55;">Dengan ini saya menyatakan bahwa dalam mengikuti proses penerimaan Calon Partner Admin Baru saya tidak memberikan imbalan atau membayar biaya apapun kepada management, apabila terbukti adanya transaksi pemberian imbalan atau pembayaran biaya dalam proses penerimaan Partner Admin Baru maka saya siap untuk dinyatakan Gugur.</legend>
+          <div class="flex gap-3 mt-3">
+           <label class="choice"><input type="radio" name="payment" value="yes" required=""> <span data-template-id="statement-yes-2" class="canva-text" style="color: rgb(234, 245, 255); font-weight: 400; font-style: normal; font-size: 16px;">Ya</span></label><label class="choice"><input type="radio" name="payment" value="no"> <span data-template-id="statement-no-2" class="canva-text" style="color: rgb(234, 245, 255); font-weight: 400; font-style: normal; font-size: 16px;">Tidak</span></label>
+          </div>
+         </fieldset><label class="choice block"><input id="processing-consent" type="checkbox" required=""> <span data-template-id="processing-consent-label" class="canva-text ml-1 text-sm leading-relaxed" style="color: rgb(234, 245, 255); font-weight: 400; font-style: normal; font-size: 14px; line-height: 1.5;">Saya menyetujui pemrosesan data yang saya isi untuk tujuan seleksi calon partner sesuai ketentuan yang berlaku.</span></label>
+        </div>
+        <div id="review-box" class="hidden mt-7 rounded-xl border border-blue-400/35 bg-[#071a3d]/70 p-5">
+         <h3 data-template-id="review-heading" class="canva-text font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 19px;">Periksa ringkasan sebelum mengirim</h3>
+         <div id="review-content" class="mt-3 text-sm text-blue-100/75 space-y-2"></div>
+         <p data-template-id="review-warning" class="canva-text mt-4 text-xs" style="color: rgb(253, 230, 138); font-weight: 400; font-style: normal; font-size: 12px; line-height: 1.5;">Setelah dikirim, data hanya seharusnya ditinjau oleh Owner/Admin yang berwenang. Jangan mengirim data atau dokumen sensitif nyata melalui prototipe ini.</p><button data-template-id="send-button" id="send-button" type="submit" class="canva-button mt-5 rounded-lg px-5 py-3 font-bold hover:brightness-110 disabled:opacity-50" style="background: rgb(33, 150, 255); color: rgb(4, 16, 31); font-weight: 800; font-style: normal; font-size: 16px;">Kirim pendaftaran</button>
+        </div>
+       </section>
+       <p id="form-message" class="hidden mt-5 rounded-lg p-3 text-sm" aria-live="polite"></p>
+       <div id="form-controls" class="mt-8 pt-5 border-t border-blue-400/20 flex justify-between gap-3">
+        <button data-template-id="back-button" id="back-button" type="button" class="canva-button rounded-lg border border-blue-300/40 px-4 py-2.5 text-sm font-semibold hover:bg-blue-500/10" style="background: rgb(8, 21, 42); color: rgb(220, 238, 255); font-weight: 700; font-style: normal; font-size: 16px;">Kembali</button><button data-template-id="next-button" id="next-button" type="button" class="canva-button rounded-lg px-5 py-2.5 text-sm font-bold hover:brightness-110" style="background: rgb(33, 150, 255); color: rgb(4, 16, 31); font-weight: 800; font-style: normal; font-size: 16px;">Lanjut</button>
+       </div>
+      </form>
+      <section id="success-card" class="hidden p-8 text-center">
+       <i data-lucide="circle-check-big" class="mx-auto w-14 h-14 text-emerald-300"></i>
+       <h2 data-template-id="success-heading" class="canva-text mt-4 font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Pendaftaran diterima</h2>
+       <p data-template-id="success-text" class="canva-text mx-auto mt-3 max-w-lg" style="color: rgb(201, 221, 247); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.5;">Terima kasih. Simpan nomor referensi ini untuk komunikasi terkait proses seleksi. Status awal pendaftaran adalah Baru.</p>
+       <p id="reference-output" class="mt-5 font-mono font-bold tracking-wider text-blue-300"></p><span data-template-id="new-status" class="canva-tag inline-block mt-4 rounded-full px-3 py-1 text-sm font-bold" style="background: rgb(23, 62, 112); color: rgb(167, 212, 255); font-weight: 700; font-style: normal; font-size: 16px;">Status: Baru</span><button data-template-id="new-registration-button" type="button" onclick="resetForm()" class="canva-button block mx-auto mt-7 rounded-lg px-5 py-3 font-bold" style="background: rgb(33, 150, 255); color: rgb(4, 16, 31); font-weight: 800; font-style: normal; font-size: 16px;">Buat pendaftaran baru</button>
+      </section>
+     </div>
+    </section>
+    <section id="data-pendaftar-view" class="route-view" aria-labelledby="admin-title">
+     <div id="admin-gate" class="max-w-2xl mx-auto py-8">
+      <p data-template-id="admin-kicker" class="canva-text font-mono text-xs tracking-[.2em]" style="color: rgb(141, 202, 255); font-weight: 700; font-style: normal; font-size: 16px; letter-spacing: 0.12rem;">AREA TERBATAS</p>
+      <h1 data-template-id="admin-title" class="canva-text mt-3 font-extrabold" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 32px;">Data Pendaftar</h1>
+      <div data-template-id="demo-login-card" class="canva-card panel mt-7 rounded-2xl p-6" style="background: rgb(8, 21, 42);">
+       <i data-lucide="shield-check" class="text-blue-300 w-8 h-8"></i>
+       <h2 data-template-id="demo-login-heading" class="canva-text mt-4 font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Akses Owner/Admin — Demo</h2>
+       <p data-template-id="demo-login-warning" class="canva-text mt-3 text-sm leading-relaxed" style="color: rgb(201, 221, 247); font-weight: 400; font-style: normal; font-size: 14px; line-height: 1.55;">Layar ini adalah simulasi akses, bukan autentikasi produksi dan bukan pengamanan data yang memadai. Untuk penggunaan nyata diperlukan backend, autentikasi server-side, RBAC, enkripsi, audit log, dan kebijakan retensi.</p><label class="choice flex gap-3 mt-5"><input id="admin-ack" type="checkbox"><span data-template-id="admin-ack-label" class="canva-text text-sm" style="color: rgb(234, 245, 255); font-weight: 400; font-style: normal; font-size: 14px;">Saya memahami bahwa saya hanya boleh melanjutkan untuk evaluasi demo oleh Owner/Admin yang berwenang.</span></label><button data-template-id="admin-enter-button" id="admin-enter-button" type="button" class="canva-button mt-5 rounded-lg px-5 py-3 font-bold disabled:opacity-40" disabled="" style="background: rgb(33, 150, 255); color: rgb(4, 16, 31); font-weight: 800; font-style: normal; font-size: 16px;">Masuk ke dashboard demo</button><button data-template-id="return-applicant-button" type="button" onclick="goRoute('pendaftar')" class="canva-button mt-3 block text-sm underline" style="color: rgb(184, 216, 255); font-weight: 600; font-style: normal; font-size: 16px;">Kembali ke halaman pendaftar</button>
+      </div>
+     </div>
+     <section id="admin-dashboard" class="admin-only" aria-label="Dashboard data pendaftar">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+       <div>
+        <p data-template-id="dashboard-kicker" class="canva-text font-mono text-xs tracking-[.2em]" style="color: rgb(141, 202, 255); font-weight: 700; font-style: normal; font-size: 16px; letter-spacing: 0.12rem;">OWNER / ADMIN DEMO</p>
+        <h1 data-template-id="dashboard-title" class="canva-text mt-2 font-extrabold" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 32px;">Kelola kiriman pendaftar</h1>
+       </div>
+       <div class="flex gap-2">
+        <button data-template-id="export-button" id="export-button" type="button" class="canva-button rounded-lg px-4 py-2.5 font-bold text-sm" style="background: rgb(33, 150, 255); color: rgb(4, 16, 31); font-weight: 800; font-style: normal; font-size: 16px;">Ekspor CSV</button><button data-template-id="logout-button" id="logout-button" type="button" class="canva-button rounded-lg border border-blue-300/40 px-4 py-2.5 text-sm font-bold" style="background: rgb(8, 21, 42); color: rgb(220, 238, 255); font-weight: 700; font-style: normal; font-size: 16px;">Keluar dari Admin</button>
+       </div>
+      </div>
+      <aside data-template-id="admin-security-note" class="canva-banner mt-6 rounded-xl border border-amber-400/45 p-4" style="background: rgb(63, 45, 10);">
+       <p data-template-id="admin-security-note-text" class="canva-text text-sm leading-relaxed" style="color: rgb(255, 243, 196); font-weight: 400; font-style: normal; font-size: 14px; line-height: 1.55;">Untuk penggunaan nyata diperlukan autentikasi server-side, RBAC, enkripsi, audit akses, kebijakan retensi, dasar hukum yang sesuai, dan peninjauan kepatuhan. Seluruh operasi baca, pencarian, ekspor, perubahan status, dan hapus harus diperiksa oleh server/API.</p>
+      </aside>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+       <div data-template-id="stat-total-card" class="canva-card panel rounded-xl p-4" style="background: rgb(8, 21, 42);">
+        <p data-template-id="stat-total-label" class="canva-text text-xs" style="color: rgb(181, 203, 232); font-weight: 600; font-style: normal; font-size: 16px;">Total pendaftar</p>
+        <p id="stat-total" class="mt-2 text-2xl font-bold">0</p>
+       </div>
+       <div data-template-id="stat-new-card" class="canva-card panel rounded-xl p-4" style="background: rgb(8, 21, 42);">
+        <p data-template-id="stat-new-label" class="canva-text text-xs" style="color: rgb(181, 203, 232); font-weight: 600; font-style: normal; font-size: 16px;">Status Baru</p>
+        <p id="stat-new" class="mt-2 text-2xl font-bold">0</p>
+       </div>
+       <div data-template-id="stat-review-card" class="canva-card panel rounded-xl p-4" style="background: rgb(8, 21, 42);">
+        <p data-template-id="stat-review-label" class="canva-text text-xs" style="color: rgb(181, 203, 232); font-weight: 600; font-style: normal; font-size: 16px;">Sedang Ditinjau</p>
+        <p id="stat-review" class="mt-2 text-2xl font-bold">0</p>
+       </div>
+       <div data-template-id="stat-pass-card" class="canva-card panel rounded-xl p-4" style="background: rgb(8, 21, 42);">
+        <p data-template-id="stat-pass-label" class="canva-text text-xs" style="color: rgb(181, 203, 232); font-weight: 600; font-style: normal; font-size: 16px;">Status Lolos</p>
+        <p id="stat-pass" class="mt-2 text-2xl font-bold">0</p>
+       </div>
+      </div>
+      <div class="panel mt-6 rounded-2xl overflow-hidden">
+       <div class="p-4 flex flex-wrap gap-3 border-b border-blue-400/20">
+        <label class="sr-only" for="admin-search">Cari pendaftar</label><input id="admin-search" class="field !mt-0 flex-1 min-w-48" placeholder="Cari nama atau referensi"><label class="sr-only" for="status-filter">Filter status</label><select id="status-filter" class="field !mt-0 w-auto"><option value="">Semua status</option><option>Baru</option><option>Ditinjau</option><option>Lolos</option><option>Tidak Lolos</option></select>
+       </div>
+       <div class="overflow-x-auto">
+        <table class="w-full text-sm text-left">
+         <thead class="bg-blue-500/10 text-blue-100/65">
+          <tr>
+           <th class="p-4">Referensi</th>
+           <th class="p-4">Pendaftar</th>
+           <th class="p-4">Dikirim</th>
+           <th class="p-4">Status</th>
+           <th class="p-4"></th>
+          </tr>
+         </thead>
+         <tbody id="applicant-list"></tbody>
+        </table>
+       </div>
+       <p id="empty-admin" data-template-id="admin-empty" class="canva-text hidden p-8 text-center" style="color: rgb(181, 203, 232); font-weight: 400; font-style: normal; font-size: 14px;">Belum ada pendaftaran yang sesuai dengan pencarian atau filter.</p>
+      </div>
+     </section>
+    </section>
+   </main>
+  </div>
+  <div id="detail-modal" class="modal fixed inset-0 z-50 items-center justify-center bg-black/75 p-4" role="dialog" aria-modal="true" aria-labelledby="detail-heading">
+   <div class="panel w-full max-w-3xl max-h-[88%] overflow-y-auto rounded-2xl p-6">
+    <div class="flex justify-between gap-4">
+     <div>
+      <h2 data-template-id="detail-heading" class="canva-text font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Detail pendaftar</h2>
+      <p id="detail-reference" class="mt-1 font-mono text-xs text-blue-300"></p>
+     </div><button id="close-modal" type="button" class="icon-button" aria-label="Tutup detail"><i data-lucide="x"></i></button>
+    </div>
+    <p data-template-id="masking-note" class="canva-text mt-4 rounded-lg border border-blue-400/25 bg-blue-500/10 p-3 text-sm" style="color: rgb(213, 233, 255); font-weight: 400; font-style: normal; font-size: 14px; line-height: 1.5;">Data kontak dan alamat dimasking secara default. Prototipe ini hanya menyimpan status kesediaan data sensitif, bukan dokumen, nomor identitas, lokasi presisi, atau file unggahan.</p>
+    <div id="detail-content" class="grid md:grid-cols-2 gap-3 mt-5 text-sm"></div>
+    <div class="flex flex-wrap gap-3 mt-6">
+     <button data-template-id="reveal-button" id="reveal-button" type="button" class="canva-button rounded-lg px-4 py-2.5 font-bold text-sm" style="background: rgb(33, 150, 255); color: rgb(4, 16, 31); font-weight: 700; font-style: normal; font-size: 16px;">Minta konfirmasi tampilkan data</button><button data-template-id="confirm-reveal-button" id="confirm-reveal-button" type="button" class="canva-button hidden rounded-lg border border-amber-300/60 px-4 py-2.5 text-sm font-bold" style="background: rgb(63, 45, 10); color: rgb(255, 243, 196); font-weight: 700; font-style: normal; font-size: 16px;">Saya konfirmasi, tampilkan data operasional</button>
+    </div>
+    <div class="mt-6 border-t border-blue-400/20 pt-5">
+     <label data-template-id="status-label" class="canva-text text-sm font-semibold" for="detail-status" style="color: rgb(234, 245, 255); font-weight: 600; font-style: normal; font-size: 16px;">Status seleksi</label>
+     <div class="flex flex-wrap gap-3 mt-2">
+      <select id="detail-status" class="field !mt-0 w-auto"><option>Baru</option><option>Ditinjau</option><option>Lolos</option><option>Tidak Lolos</option></select><button data-template-id="save-status-button" id="save-status-button" type="button" class="canva-button rounded-lg px-4 py-2.5 font-bold text-sm" style="background: rgb(33, 150, 255); color: rgb(4, 16, 31); font-weight: 700; font-style: normal; font-size: 16px;">Simpan status</button>
+     </div>
+    </div>
+    <div class="mt-5">
+     <h3 data-template-id="log-heading" class="canva-text font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 19px;">Log perubahan status</h3>
+     <ul id="status-log" class="mt-2 space-y-2 text-xs text-blue-100/70"></ul>
+    </div>
+    <div class="mt-6 pt-5 border-t border-blue-400/20">
+     <button data-template-id="delete-button" id="delete-button" type="button" class="canva-button rounded-lg border border-rose-400/65 px-4 py-2.5 text-sm font-bold" style="background: rgb(8, 21, 42); color: rgb(255, 192, 202); font-weight: 700; font-style: normal; font-size: 16px;">Hapus data pendaftar</button>
+     <div id="delete-confirm" class="hidden mt-3 flex gap-2">
+      <button data-template-id="confirm-delete-button" id="confirm-delete-button" type="button" class="canva-button rounded-lg px-4 py-2 text-sm font-bold" style="background: rgb(225, 29, 72); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Konfirmasi hapus permanen</button><button data-template-id="cancel-delete-button" id="cancel-delete-button" type="button" class="canva-button rounded-lg border border-blue-300/40 px-4 py-2 text-sm" style="background: rgb(8, 21, 42); color: rgb(220, 238, 255); font-weight: 700; font-style: normal; font-size: 16px;">Batal</button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+    const sensitiveItems=["KTP","Kartu Keluarga","KIA/Kartu Identitas Anak","Kartu Pelajar","Share Location","Akun IG utama","Akun TikTok utama","Nomor WhatsApp orang tua","Nomor teman dekat","Foto selfie memegang KK"];
+    let currentStep=1,records=[],selectedRecord=null,revealConfirmed=false,adminActive=false,reviewIndex=0,reviewTimer=null;
+    const reduceMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function goRoute(route){location.hash=route}
+    function renderRoute(){const route=location.hash.replace("#","")||"pendaftar";document.querySelectorAll(".route-view").forEach(v=>v.classList.remove("active"));document.getElementById(route==="data-pendaftar"?"data-pendaftar-view":"pendaftar-view").classList.add("active");window.scrollTo({top:0,behavior:reduceMotion?"auto":"smooth"})}
+    function escapeHtml(s){const d=document.createElement("div");d.textContent=s||"";return d.innerHTML}
+    function showMessage(text,ok=false){const el=document.getElementById("form-message");el.textContent=text;el.className="mt-5 rounded-lg p-3 text-sm "+(ok?"bg-emerald-400/15 text-emerald-100 border border-emerald-300/35":"bg-rose-400/15 text-rose-100 border border-rose-300/35")}
+    function renderSensitive(){const target=document.getElementById("sensitive-grid");sensitiveItems.forEach((name,i)=>{const field=document.createElement("fieldset");field.className="rounded-xl border border-blue-400/25 bg-[#08152a] p-4";field.innerHTML=`<legend class="px-1 text-sm font-semibold">${escapeHtml(name)}</legend><p class="mt-1 text-xs text-blue-100/55">Tidak ada unggahan atau nilai dokumen dikumpulkan dalam prototipe ini.</p><label class="sr-only" for="sensitive-${i}">Status ${escapeHtml(name)}</label><select id="sensitive-${i}" class="sensitive-select field text-sm" required><option value="">Pilih status</option><option>Bersedia</option><option>Tidak bersedia</option><option>Perlu klarifikasi</option></select>`;target.appendChild(field)})}
+    function validateStep(step){const panel=document.querySelector(`[data-form-step="${step}"]`);let valid=true;panel.querySelectorAll("[required]").forEach(el=>{const bad=el.type==="radio"?!panel.querySelector(`input[name="${el.name}"]:checked`):el.type==="checkbox"?!el.checked:!el.value;el.classList.toggle("invalid",bad);if(bad)valid=false});if(step===1&&!/^\S+@\S+\.\S+$/.test(document.getElementById("email").value))valid=false;if(step===1&&document.getElementById("contact").value.replace(/\D/g,"").length<8)valid=false;if(step===2&&document.querySelector('input[name="ready"]:checked')?.value==="yes"&&!document.getElementById("contribution").value.trim())valid=false;if(!valid)showMessage("Mohon lengkapi semua isian wajib dengan format yang benar.");else document.getElementById("form-message").classList.add("hidden");return valid}
+    function updateStep(){document.querySelectorAll(".form-step").forEach(el=>el.classList.toggle("active",+el.dataset.formStep===currentStep));document.querySelectorAll("[data-step-indicator]").forEach(el=>{const n=+el.dataset.stepIndicator;el.classList.toggle("active",n===currentStep);el.classList.toggle("done",n<currentStep)});document.getElementById("back-button").style.visibility=currentStep===1?"hidden":"visible";document.getElementById("next-button").classList.toggle("hidden",currentStep===4);if(currentStep===4)buildReview()}
+    function buildReview(){const ready=document.querySelector('input[name="ready"]:checked')?.value==="yes"?"Ya":"Tidak";document.getElementById("review-content").innerHTML=`<p><b>Nama:</b> ${escapeHtml(document.getElementById("full-name").value)}</p><p><b>Email:</b> ${escapeHtml(document.getElementById("email").value)}</p><p><b>Kesiapan berkontribusi:</b> ${ready}</p><p><b>Data sensitif:</b> hanya status kesediaan yang akan dicatat, bukan dokumen atau nomor mentah.</p>`;document.getElementById("review-box").classList.remove("hidden")}
+    function ref(){return"ATMC-"+new Date().getFullYear()+"-"+Math.random().toString(36).slice(2,8).toUpperCase()}
+    function getStatuses(){const out={};document.querySelectorAll(".sensitive-select").forEach((x,i)=>out[sensitiveItems[i]]=x.value);return out}
+
+    document.getElementById("next-button").addEventListener("click",()=>{if(validateStep(currentStep)){currentStep++;updateStep()}});
+    document.getElementById("back-button").addEventListener("click",()=>{currentStep--;updateStep()});
+    document.querySelectorAll('input[name="ready"]').forEach(x=>x.addEventListener("change",()=>{const yes=document.querySelector('input[name="ready"]:checked')?.value==="yes";document.getElementById("contribution-wrap").classList.toggle("hidden",!yes);document.getElementById("contribution").required=yes;document.getElementById("no-contribution-note").classList.toggle("hidden",yes)}));
+    document.getElementById("registration-form").addEventListener("submit",async e=>{e.preventDefault();if(!validateStep(4))return;const btn=document.getElementById("send-button");btn.disabled=true;const payload={reference_id:ref(),full_name:document.getElementById("full-name").value.trim(),email:document.getElementById("email").value.trim(),contact:document.getElementById("contact").value.trim(),reason:document.getElementById("reason").value.trim(),ready_to_contribute:document.querySelector('input[name="ready"]:checked').value==="yes",contribution:document.getElementById("contribution").value.trim(),sensitive_data_consent:document.querySelector('input[name="sensitive-consent"]:checked').value,sensitive_data_statuses:JSON.stringify(getStatuses()),birth_place:document.getElementById("birth-place").value.trim(),birth_date:document.getElementById("birth-date").value,current_address:document.getElementById("address").value.trim(),school_name:document.getElementById("school").value.trim(),truth_statement:document.querySelector('input[name="truth"]:checked').value==="yes",no_payment_statement:document.querySelector('input[name="payment"]:checked').value==="yes",processing_consent:document.getElementById("processing-consent").checked,submitted_at:new Date().toISOString(),selection_status:"Baru",status_log:JSON.stringify([{status:"Baru",at:new Date().toISOString(),note:"Pendaftaran diterima"}])};const result=await window.dataSdk.create(payload);btn.disabled=false;if(result.isOk){document.getElementById("registration-form").classList.add("hidden");document.getElementById("success-card").classList.remove("hidden");document.getElementById("reference-output").textContent=payload.reference_id}else showMessage("Pengiriman belum berhasil. Silakan coba kembali.")});
+    function resetForm(){document.getElementById("registration-form").reset();document.getElementById("registration-form").classList.remove("hidden");document.getElementById("success-card").classList.add("hidden");document.getElementById("contribution-wrap").classList.add("hidden");currentStep=1;updateStep()}
+
+    function setReview(index){reviewIndex=(index+7)%7;document.getElementById("review-track").style.transform=`translateX(-${reviewIndex*100}%)`;document.querySelectorAll(".review-dot").forEach((dot,i)=>{dot.classList.toggle("active",i===reviewIndex);dot.setAttribute("aria-current",i===reviewIndex?"true":"false")})}
+    function stopReviews(){if(reviewTimer){clearInterval(reviewTimer);reviewTimer=null}}
+    function startReviews(){if(!reduceMotion&&!reviewTimer)reviewTimer=setInterval(()=>setReview(reviewIndex+1),5500)}
+    document.getElementById("reviews-prev").onclick=()=>{setReview(reviewIndex-1);stopReviews()};
+    document.getElementById("reviews-next").onclick=()=>{setReview(reviewIndex+1);stopReviews()};
+    document.querySelectorAll(".review-dot").forEach((dot,i)=>dot.onclick=()=>{setReview(i);stopReviews()});
+    const carousel=document.getElementById("review-carousel");let touchStart=0;carousel.addEventListener("mouseenter",stopReviews);carousel.addEventListener("mouseleave",startReviews);carousel.addEventListener("focusin",stopReviews);carousel.addEventListener("focusout",startReviews);carousel.addEventListener("touchstart",e=>touchStart=e.changedTouches[0].screenX,{passive:true});carousel.addEventListener("touchend",e=>{const d=e.changedTouches[0].screenX-touchStart;if(Math.abs(d)>45){setReview(reviewIndex+(d<0?1:-1));stopReviews()}},{passive:true});
+
+    function mask(value,type){if(!value)return"—";if(type==="email"){const[a,b]=value.split("@");return a.slice(0,2)+"•••@"+b}if(type==="contact")return"••••••"+value.slice(-3);if(type==="address")return"•••••••• (dimasking)";return"•••••• (tidak ditampilkan)"}
+    function filtered(){const q=document.getElementById("admin-search").value.toLowerCase(),s=document.getElementById("status-filter").value;return records.filter(r=>(!q||r.full_name.toLowerCase().includes(q)||r.reference_id.toLowerCase().includes(q))&&(!s||r.selection_status===s))}
+    function renderAdmin(){if(!adminActive)return;const data=filtered(),tbody=document.getElementById("applicant-list");tbody.innerHTML="";data.forEach(r=>{const tr=document.createElement("tr");tr.className="border-t border-blue-400/15 hover:bg-blue-500/5";tr.innerHTML=`<td class="p-4 font-mono text-xs text-blue-300">${escapeHtml(r.reference_id)}</td><td class="p-4"><b>${escapeHtml(r.full_name)}</b><br><span class="text-xs text-blue-100/55">${mask(r.email,"email")}</span></td><td class="p-4 text-blue-100/65">${new Date(r.submitted_at).toLocaleDateString("id-ID")}</td><td class="p-4"><span class="status-badge status-${r.selection_status.replace(" ","-")}">${escapeHtml(r.selection_status)}</span></td><td class="p-4"><button class="detail-btn text-blue-300 underline focusable" data-id="${r.__backendId}">Detail</button></td>`;tbody.appendChild(tr)});document.getElementById("empty-admin").classList.toggle("hidden",data.length!==0);document.getElementById("stat-total").textContent=records.length;document.getElementById("stat-new").textContent=records.filter(x=>x.selection_status==="Baru").length;document.getElementById("stat-review").textContent=records.filter(x=>x.selection_status==="Ditinjau").length;document.getElementById("stat-pass").textContent=records.filter(x=>x.selection_status==="Lolos").length;tbody.querySelectorAll(".detail-btn").forEach(b=>b.onclick=()=>openDetail(records.find(x=>x.__backendId===b.dataset.id)))}
+    function openDetail(r){selectedRecord=r;revealConfirmed=false;document.getElementById("detail-modal").classList.add("open");document.getElementById("detail-reference").textContent=r.reference_id;document.getElementById("detail-status").value=r.selection_status;document.getElementById("confirm-reveal-button").classList.add("hidden");renderDetail()}
+    function renderDetail(){const r=selectedRecord,show=revealConfirmed,statuses=JSON.parse(r.sensitive_data_statuses||"{}");const rows=[["Nama lengkap",r.full_name],["Email",show?r.email:mask(r.email,"email")],["Kontak",show?r.contact:mask(r.contact,"contact")],["Tempat, tanggal lahir",`${r.birth_place}, ${r.birth_date}`],["Alamat",show?r.current_address:mask(r.current_address,"address")],["Sekolah",r.school_name],["Alasan",r.reason],["Kontribusi",r.contribution||"Tidak diisi"],["Persetujuan data sensitif",r.sensitive_data_consent],["Status data sensitif",Object.entries(statuses).map(([k,v])=>`${k}: ${v}`).join(" · ")]];document.getElementById("detail-content").innerHTML=rows.map(([k,v])=>`<div class="rounded-lg border border-blue-400/20 bg-[#08152a] p-3"><p class="text-xs text-blue-100/55">${escapeHtml(k)}</p><p class="mt-1 leading-relaxed">${escapeHtml(v)}</p></div>`).join("");const log=JSON.parse(r.status_log||"[]");document.getElementById("status-log").innerHTML=log.map(x=>`<li>${new Date(x.at).toLocaleString("id-ID")} — <b>${escapeHtml(x.status)}</b>: ${escapeHtml(x.note||"")}</li>`).join("")}
+    document.getElementById("close-modal").onclick=()=>document.getElementById("detail-modal").classList.remove("open");
+    document.getElementById("reveal-button").onclick=()=>document.getElementById("confirm-reveal-button").classList.remove("hidden");
+    document.getElementById("confirm-reveal-button").onclick=()=>{revealConfirmed=true;renderDetail()};
+    document.getElementById("save-status-button").onclick=async()=>{const btn=document.getElementById("save-status-button"),status=document.getElementById("detail-status").value;btn.disabled=true;const log=JSON.parse(selectedRecord.status_log||"[]");if(status!==selectedRecord.selection_status)log.push({status,at:new Date().toISOString(),note:"Status diperbarui oleh Owner/Admin demo"});const result=await window.dataSdk.update({...selectedRecord,selection_status:status,status_log:JSON.stringify(log)});btn.disabled=false;if(result.isOk){selectedRecord.selection_status=status;selectedRecord.status_log=JSON.stringify(log);renderDetail()}};
+    document.getElementById("delete-button").onclick=()=>document.getElementById("delete-confirm").classList.remove("hidden");
+    document.getElementById("cancel-delete-button").onclick=()=>document.getElementById("delete-confirm").classList.add("hidden");
+    document.getElementById("confirm-delete-button").onclick=async()=>{const b=document.getElementById("confirm-delete-button");b.disabled=true;const res=await window.dataSdk.delete(selectedRecord);b.disabled=false;if(res.isOk)document.getElementById("detail-modal").classList.remove("open")};
+    document.getElementById("admin-search").oninput=renderAdmin;document.getElementById("status-filter").onchange=renderAdmin;
+    document.getElementById("admin-ack").onchange=e=>document.getElementById("admin-enter-button").disabled=!e.target.checked;
+    document.getElementById("admin-enter-button").onclick=()=>{adminActive=true;document.getElementById("admin-gate").classList.add("hidden");document.getElementById("admin-dashboard").classList.add("active");renderAdmin()};
+    document.getElementById("logout-button").onclick=()=>{adminActive=false;document.getElementById("admin-dashboard").classList.remove("active");document.getElementById("admin-gate").classList.remove("hidden");document.getElementById("admin-ack").checked=false;document.getElementById("admin-enter-button").disabled=true};
+    document.getElementById("export-button").onclick=()=>{const head=["Referensi","Nama","Email","Kontak","Dikirim","Status"];const lines=[head,...filtered().map(r=>[r.reference_id,r.full_name,r.email,r.contact,r.submitted_at,r.selection_status])].map(row=>row.map(x=>`"${String(x).replaceAll('"','""')}"`).join(",")).join("\n");const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([lines],{type:"text/csv"}));a.download="atomic-admin-pendaftar.csv";a.click();URL.revokeObjectURL(a.href)};
+    const handler={onDataChanged(data){records=data;renderAdmin()}};
+    async function init(){renderSensitive();updateStep();renderRoute();lucide.createIcons();startReviews();const result=await window.dataSdk.init(handler);if(!result.isOk)showMessage("Layanan penyimpanan belum siap. Silakan muat ulang halaman.")}window.addEventListener("hashchange",renderRoute);init();
+  </script>
+ 
+</body></html>
